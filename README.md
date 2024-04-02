@@ -1,19 +1,31 @@
 # GenPk ![License](https://img.shields.io/badge/License-MIT-blue.svg) 
 
 ## Description
-GenPk is a powerful shell script tailored for enhancing data security through streamlined secret management and file handling processes. This script empowers users to generate strong secrets, encrypt and decrypt files, and manage sensitive data with ease, incorporating robust tools like openssl, zenity, and shred into a unified, user-friendly interface.
+GenPk is a powerful shell script tailored for enhancing data security through streamlined secret management and file handling processes. This script enables users to generate robust secrets, encrypt and decrypt files, and handle sensitive information, by combining the capabilities of openssl, zenity, and shred. This integration creates a cohesive and intuitive interface for users looking to secure their data effectively.
 
 ![preview-image](/assets/preview1.png)
 
-## Features 
+## Key Features
 
-- Secret Generation: Effortlessly create secure, random secrets in Base64 or hexadecimal formats for encryption keys, tokens, passwords, and more.
-- File Encryption: Encrypt files with AES-256-CBC encryption to protect sensitive data from unauthorized access.
-- File Decryption: Decrypt your encrypted files to their original, accessible state quickly and securely.
-- Random Password Generation: Generate complex, random passwords to strengthen the security of your digital accounts.
-- Automatic Secure File Deletion:
-    - After encrypting a file, GenPk immediately shreds the original file, ensuring that no sensitive data remains recoverable.
-    - Upon decrypting a file, GenPk automatically shreds the encrypted version, maintaining your data's confidentiality.
+**Secret Generation:** GenPk generates secure, random secrets in Base64 or hexadecimal formats, suitable for encryption keys, tokens, and passwords. Using cryptographic best practices, it ensures each secret is unique and secure against decryption attempts.
+
+**File Encryption:** With AES-256-CBC encryption, GenPk creates a strong defense against unauthorized access. Enhancements include:
+
+- Salt: Incorporates a cryptographic salt in each encryption process, enhancing uniqueness and thwarting precomputed hash (rainbow table) attacks.
+- PBKDF2: Employs PBKDF2 for key derivation, significantly increasing security by using a salt and multiple iterations. This effectively counters brute-force attacks by delaying decryption attempts.
+- Iterative Processing: The use of a high iteration count makes the key derivation process time-consuming, which deters brute-force attacks due to the computational time required.
+
+**File Decryption:** GenPk allows for the secure decryption of encrypted files to their original state. The process adheres to strict security standards, ensuring data can only be accessed by authorized users.
+
+**Random Password Generation:** Recognizing the importance of strong passwords, GenPk helps users create complex, random passwords. These passwords are designed to resist common cybersecurity threats, enhancing account security.
+
+**Automatic Secure File Deletion:**
+- Post-Encryption: Immediately after encrypting a file, GenPk uses the shred command to permanently delete the original file, preventing any possibility of data recovery.
+- Post-Decryption: After decrypting a file, GenPk similarly shreds the encrypted file, ensuring that only the decrypted data remains.
+
+<br>
+
+***GenPk emphasizes the importance of modern cryptographic practices. This educative approach aims to deepen users' understanding of data security and promote effective protection strategies.***
 
 ## Installation
 
@@ -30,31 +42,9 @@ To get started with GenPk, follow these simple steps:
     ./GenPk.sh
     ```
 
-## Create an alias
-
-Open ~/.bashrc or ~/.zshrc:
-```bash
-vim ~/.bashrc
-```
-
-Add the following line to your ~/.bashrc or ~/.bash_profile:
-```bash
-alias genpk="/path/to/Genpk.sh"
-```
-
-Apply changes:
-```bash
-source ~/.bashrc
-```
-
-Run the script:
-```bash
-genpk
-```
-
 ## Usage
 
-After launching GenPk, use the arrow keys to navigate through the menu options and select the desired functionality:
+After launching GenPk, use the arrow keys ⬆️⬇️ to navigate through the menu options and select the desired functionality:
 
 1. Base64, 32 bytes: Generates a 32-byte random secret encoded in Base64.
 2. Base64, 64 bytes: Generates a 64-byte random secret encoded in Base64.
