@@ -3,7 +3,7 @@
 ## Description
 GenPk is a powerful shell script tailored for enhancing data security through streamlined secret management and file handling processes. This script empowers users to generate strong secrets, encrypt and decrypt files, and manage sensitive data with ease, incorporating robust tools like openssl, zenity, and shred into a unified, user-friendly interface.
 
-![preview-image](/assets/preview.png)
+![preview-image](/assets/preview1.png)
 
 ## Features 
 
