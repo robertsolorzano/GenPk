@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPTION=$(whiptail --title "Utility Script" --menu "Choose an option:" 20 78 7 \
+OPTION=$(whiptail --title "GenPk - Data security script" --menu "Choose an option:" 20 78 7 \
 "1" "Base64, 32 bytes" \
 "2" "Base64, 64 bytes" \
 "3" "Hex, 32 bytes" \
