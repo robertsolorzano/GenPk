@@ -66,6 +66,14 @@ Ensure the following tools are installed on your system:
 
 The automatic shredding feature permanently deletes files from your system. Use caution and ensure you have backups or no longer need the files before proceeding.
 
+## Acknowledgments
+
+This project uses the following open-source tools:
+
+- **OpenSSL**: For encryption and decryption functionalities. [Learn more about OpenSSL](https://www.openssl.org/).
+- **Zenity**: For creating graphical dialog boxes in scripts. [Learn more about Zenity](https://help.gnome.org/users/zenity/).
+- **Shred**: For securely deleting files. Part of the GNU Core Utilities. [Learn more about Shred](https://www.gnu.org/software/coreutils/manual/html_node/shred-invocation.html).
+
 ## License
 
 This project is licensed under the MIT license. For more information, see [here](https://opensource.org/licenses/MIT).
