@@ -1,7 +1,7 @@
 # GenPk ![License](https://img.shields.io/badge/License-MIT-blue.svg) 
 
 ## Description
-GenPk is a powerful shell script tailored for enhancing data security through streamlined secret management and file handling processes. This script enables users to generate robust secrets, encrypt and decrypt files, and handle sensitive information, by combining the capabilities of openssl, zenity, and shred. This integration creates a cohesive and intuitive interface for users looking to secure their data effectively.
+Easy script to create passkeys on the fly and encrypt files
 
 ![preview-image](/assets/preview1.png)
 
